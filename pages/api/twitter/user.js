@@ -8,7 +8,7 @@ export default async (req, res) => {
         secret: process.env.NEXTAUTH_SECRET
     });
 
-    // try {
+    try {
         const twitterClient = new Twitter({
             consumer_key: process.env.TWITTER_ID,
             consumer_secret: process.env.TWITTER_SECRET,
@@ -31,12 +31,10 @@ export default async (req, res) => {
 
         return res.status(200).json({
             status: 'Ok',
-            data,
-            userData,
-            token
+            data
         });
-    // } catch (error) {
-    //     // return error;
-    //     return res.status(500).send({ error });
-    // }
+    } catch (error) {
+        // return error;
+        return res.status(500).send({ error });
+    }
 }

@@ -1,5 +1,6 @@
 import NextAuth from "next-auth"
 import TwitterProvider from "next-auth/providers/twitter"
+import {cloneDeep} from "tailwindcss/lib/util/cloneDeep";
 
 export default NextAuth({
     // Configure one or more authentication providers
@@ -30,8 +31,9 @@ export default NextAuth({
         },
         async session({session, token, user}) {
             // Send properties to the client, like an access_token from a provider.
-            delete token.userProfile.userID;
-            session.twitter = token.userProfile;
+            let userData = cloneDeep(token.userProfile);
+            delete userData.userID;
+            session.twitter = userData;
             return session;
         }
     },
