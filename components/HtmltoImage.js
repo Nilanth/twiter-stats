@@ -17,7 +17,7 @@ export default function HtmlToImage({imageRef, userName}) {
         toPng(imageRef.current, {cacheBust: true, filter: filter, canvasWidth: 500, canvasHeight: 200})
             .then((dataUrl) => {
                 const link = document.createElement('a');
-                link.download = `${userName}-twittstats.png`;
+                link.download = `${userName}-twiterstats.png`;
                 link.href = dataUrl;
                 link.click();
             })
