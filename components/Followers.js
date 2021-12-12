@@ -81,7 +81,7 @@ export default function Followers({session}) {
                 </div>
             </figure>
             <div className="flex flex-wrap items-center justify-around max-w-4xl py-6 sm:w-full 2xl:py-12">
-                <Button label="Logout" onClick={() => oauthSignOut()}>Sign out</Button>
+                <Button label="Logout" onClick={() => oauthSignOut()} loader={loader}>Sign out</Button>
             </div>
         </>
     )
