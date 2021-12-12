@@ -8,7 +8,7 @@ export default function Layout(props) {
             <Header/>
             <div className="flex text-3xl font-bold text-sky-500 mt-14 mb-4 2xl:text-4xl">
                 <Image
-                    src="/../public/ts-logo.png"
+                    src="/ts-logo.png"
                     alt="Picture of the author"
                     width={35}
                     height={25}

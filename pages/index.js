@@ -18,7 +18,7 @@ export default function Home() {
         <Layout>
             <div className="mb-10">
             <Image
-                src="/../public/cover-logo.png"
+                src="/cover-logo.png"
                 alt="Picture of the author"
                 width={800}
                 height={300}
