@@ -11,6 +11,7 @@ import HtmlToImage from "../components/HtmltoImage";
 const fetcher = (...args) => fetch(...args).then(res => res.json());
 
 export default function Followers({session}) {
+    const [loader, setLoader] = useState(false);
     const [isAutoRefresh, setIsAutoRefresh] = useState(false);
     const ref = useRef(null);
 
@@ -19,11 +20,19 @@ export default function Followers({session}) {
     };
     const {data, error} = useSWR(session ? '/api/twitter/user' : null, fetcher,
         {refreshInterval: isAutoRefresh ? 30000 : 0, revalidateOnFocus: false}
-        );
+    );
 
     if (data && data.error && data.error.errors[0] && data.error.errors[0].code === 89) {
         signOut();
     }
+
+    function oauthSignOut() {
+        if (!loader) {
+            setLoader(!loader);
+            signOut();
+        }
+    }
+
     if (!data) return <div> Loading... </div>;
     const userData = data.data;
     return (
@@ -72,7 +81,7 @@ export default function Followers({session}) {
                 </div>
             </figure>
             <div className="flex flex-wrap items-center justify-around max-w-4xl py-6 sm:w-full 2xl:py-12">
-                <Button label="Logout" onClick={() => signOut()}>Sign out</Button>
+                <Button label="Logout" onClick={() => oauthSignOut()}>Sign out</Button>
             </div>
         </>
     )

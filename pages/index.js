@@ -13,8 +13,10 @@ export default function Home() {
     if (status === 'loading') return <Layout> Loading... </Layout>;
 
     function oauthSignIn() {
-        setLoader(!loader);
-        signIn('twitter');
+        if (!loader) {
+            setLoader(!loader);
+            signIn('twitter');
+        }
     }
 
     if (session) {
