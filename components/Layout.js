@@ -1,11 +1,27 @@
 import Header from "./Header";
 import Image from "next/image";
+import Script from 'next/script'
 
 
 export default function Layout(props) {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100">
             <Header/>
+            {/* Global Site Tag (gtag.js) - Google Analytics */}
+            <Script
+                src="https://www.googletagmanager.com/gtag/js?id=40D3DQ5Y7W"
+                strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+                {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-40D3DQ5Y7W', {
+                          page_path: window.location.pathname,
+                        });
+        `}
+            </Script>
             <div className="flex text-3xl font-bold text-sky-500 mt-14 mb-4 2xl:text-4xl">
                 <Image
                     src="/ts-logo.png"
