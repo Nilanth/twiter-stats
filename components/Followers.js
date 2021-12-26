@@ -7,6 +7,7 @@ import {UserGroupIcon} from "@heroicons/react/solid";
 import ToggleButton from "../components/Toggle";
 import AnimatePing from "../components/animatePing";
 import HtmlToImage from "../components/HtmltoImage";
+import ProfileImage from "../public/profile-pic.png";
 
 const fetcher = (...args) => fetch(...args).then(res => res.json());
 
@@ -39,7 +40,7 @@ export default function Followers({session}) {
         <>
             <figure className="md:flex bg-white rounded-xl p-8 md:p-0 shadow-xl" ref={ref}>
                 <Image
-                    src={session.user.image}
+                    src={session.user.image ? session.user.image : ProfileImage}
                     alt="Picture of the author"
                     className="w-24 h-24 md:w-64 md:h-auto rounded-tl-lg rounded-bl-lg mx-auto"
                     width={500}
