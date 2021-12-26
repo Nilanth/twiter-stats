@@ -14,8 +14,19 @@ export default function HtmlToImage({imageRef, userName}) {
             return !exclusionClasses.some(classname => node.classList && node.classList.contains(classname));
         };
         imageRef.current.style='transform:none;will-change:unset';
-        toPng(imageRef.current, {cacheBust: true, filter: filter, canvasWidth: 500,
-            canvasHeight: 200, pixelRatio: 10})
+        let canvasOptions;
+        if(window.matchMedia("(max-width: 425px)").matches){
+            canvasOptions = {
+                canvasWidth: 200,
+                canvasHeight: 400
+            }
+        } else {
+            canvasOptions = {
+                canvasWidth: 500,
+                canvasHeight: 200
+            }
+        }
+        toPng(imageRef.current, {cacheBust: true, filter: filter, ...canvasOptions, pixelRatio: 10})
             .then((dataUrl) => {
                 const link = document.createElement('a');
                 link.download = `${userName}-twiterstats.png`;
