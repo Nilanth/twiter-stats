@@ -48,6 +48,7 @@ export default function Followers({session}) {
                 className="w-24 h-24 md:w-64 md:h-auto rounded-tl-lg rounded-bl-lg mx-auto"
                 width={500}
                 height={500}
+                priority={true}
             />
             {isAutoRefresh && <AnimatePing/>}
             <div className="pt-6 md:p-4 text-center md:text-left space-y-4">

@@ -13,8 +13,9 @@ export default function HtmlToImage({imageRef, userName}) {
             const exclusionClasses = ['exclude-in-image', 'ping'];
             return !exclusionClasses.some(classname => node.classList && node.classList.contains(classname));
         };
-
-        toPng(imageRef.current, {cacheBust: true, filter: filter, canvasWidth: 500, canvasHeight: 200})
+        imageRef.current.style='transform:none;will-change:unset';
+        toPng(imageRef.current, {cacheBust: true, filter: filter, canvasWidth: 500,
+            canvasHeight: 200, pixelRatio: 10})
             .then((dataUrl) => {
                 const link = document.createElement('a');
                 link.download = `${userName}-twiterstats.png`;
