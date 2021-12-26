@@ -10,7 +10,7 @@ export default function HtmlToImage({imageRef, userName}) {
         }
 
         const filter = (node) => {
-            const exclusionClasses = ['exclude-in-image'];
+            const exclusionClasses = ['exclude-in-image', 'ping'];
             return !exclusionClasses.some(classname => node.classList && node.classList.contains(classname));
         };
 
