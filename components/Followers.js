@@ -41,7 +41,7 @@ export default function Followers({session}) {
     if (!data) return <div> Loading... </div>;
     const userData = data.data;
     return (
-        <figure className="md:flex bg-white rounded-xl p-8 md:p-0 shadow-xl twitter-card" ref={ref}>
+        <figure className="md:flex bg-white rounded-xl p-8 md:p-0 shadow-xl twitter-card dark:bg-gray-800" ref={ref}>
             <Image
                 src={session.user.image ? session.user.image : ProfileImage}
                 alt="Picture of the author"
@@ -74,13 +74,13 @@ export default function Followers({session}) {
                            href={`https://twitter.com/${userData.twitterHandle}`}>
                             @{userData.twitterHandle}
                         </a>
-                        <div className="text-gray-700 2xl:text-3xl">
+                        <div className="text-gray-700 2xl:text-3xl text-gray-400">
                             {userData && userData.location}
                         </div>
                     </figcaption>
                 }
                 <blockquote>
-                    <p className="text-lg font-medium 2xl:text-3xl">
+                    <p className="text-lg font-medium 2xl:text-3xl dark:text-gray-400">
                         {userData && userData.description}
                     </p>
                 </blockquote>
