@@ -24,7 +24,7 @@ export default function HtmlToImage({imageRef, userName}) {
             .catch((err) => {
                 console.log(err)
             })
-    }, [imageRef]);
+    }, [imageRef, userName]);
 
     return (
         <button onClick={onButtonClick} className="md:mr-6 mr-2">

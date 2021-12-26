@@ -26,7 +26,7 @@ export default async (req, res) => {
             followersCount: userData.followers_count,
             followingCount: userData.friends_count,
             description: userData.description,
-            location: userData.location
+            location: userData.location,
         };
 
         return res.status(200).json({
