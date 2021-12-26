@@ -41,7 +41,7 @@ export default function Layout(props) {
                 className="flex flex-col items-center justify-center w-full flex-1 xl:px-60 lg:px-10 md:px-10 text-center">
                 {props.children}
             </main>
-            <footer className="flex items-center justify-center w-full h-24 border-t">
+            <footer className="flex items-center justify-center w-full h-24 border-t dark:border-gray-800">
                 <a
                     className="flex items-center justify-center"
                     href="https://twitter.com/nilanth"
