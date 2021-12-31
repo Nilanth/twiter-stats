@@ -42,15 +42,17 @@ export default function Followers({session}) {
     const userData = data.data;
     return (
         <figure className="md:flex bg-white rounded-xl p-8 md:p-0 shadow-xl twitter-card dark:bg-gray-800" ref={ref}>
-            <Image
-                src={session.user.image ? session.user.image : ProfileImage}
-                alt="Picture of the author"
-                className="w-24 h-24 md:w-64 md:h-auto rounded-tl-lg rounded-bl-lg mx-auto"
-                width={500}
-                height={500}
-                priority={true}
-            />
-            {isAutoRefresh && <AnimatePing/>}
+            <div className="max-w-xs">
+                <Image
+                    src={session.user.image ? session.user.image : ProfileImage}
+                    alt="Picture of the author"
+                    className="rounded-tl-lg rounded-bl-lg mx-auto"
+                    width={500}
+                    height={500}
+                    priority={true}
+                />
+                {isAutoRefresh && <AnimatePing/>}
+            </div>
             <div className="pt-6 md:p-4 text-center md:text-left space-y-4">
                 <div className="flex 2xl:pb-5 flex-col md:flex-row">
                     <div
