@@ -9,7 +9,7 @@ import {useTimeout, useWindowSize, useLocalStorage} from 'react-use'
 
 export default function Home() {
     const [loader, setLoader] = useState(false);
-    const { width, height } = useWindowSize();
+    const {width, height} = useWindowSize();
     const [value, setValue, remove] = useLocalStorage('confettiCompleted', false);
 
     const {data: session, status} = useSession();
@@ -17,9 +17,9 @@ export default function Home() {
 
 
     function oauthSignOut() {
+        setValue(false)
         if (!loader) {
             setLoader(!loader);
-            setValue(false)
             signOut();
         }
     }
