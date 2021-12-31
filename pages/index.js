@@ -1,5 +1,5 @@
 import {useSession, signIn, signOut} from "next-auth/react"
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Layout from "../components/Layout";
 import Button from "../components/Button";
 import Followers from "../components/Followers";
@@ -15,6 +15,9 @@ export default function Home() {
     const {data: session, status} = useSession();
     const [isComplete] = useTimeout(5000);
 
+    useEffect(() => {
+        console.info('%cTwiterStats - Your Twitter Followers Tracker', "color: rgba(14, 165, 233, 1); font-size: 24px;");
+    }, []);
 
     function oauthSignOut() {
         if (!loader) {
@@ -32,7 +35,6 @@ export default function Home() {
             signIn('twitter');
         }
     }
-    console.log(isConfettiCompleted)
     if (session) {
         return (
             <Layout>

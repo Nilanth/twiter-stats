@@ -31,8 +31,8 @@ export default function Layout(props) {
                     height={25}
                 />  &nbsp;TwiterStats
             </div>
-                <div className="text-4xl text-slate-900 font-medium py-4 text-center 2xl:text-6xl dark:text-white">Your
-                    Twitter Followers Tracker
+                <div className="text-4xl text-slate-900 font-medium py-4 text-center 2xl:text-6xl dark:text-white">
+                    Your Twitter Followers Tracker
                     <span>
                         <ThemeSwitch/>
                     </span>
