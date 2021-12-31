@@ -10,16 +10,16 @@ import {useTimeout, useWindowSize, useLocalStorage} from 'react-use'
 export default function Home() {
     const [loader, setLoader] = useState(false);
     const {width, height} = useWindowSize();
-    const [value, setValue, remove] = useLocalStorage('confettiCompleted', false);
+    const [isConfettiCompleted, setConfettiCompleted, remove] = useLocalStorage('confettiCompleted', false);
 
     const {data: session, status} = useSession();
     const [isComplete] = useTimeout(5000);
 
 
     function oauthSignOut() {
-        setValue(false)
         if (!loader) {
             setLoader(!loader);
+            setConfettiCompleted(false)
             signOut();
         }
     }
@@ -32,18 +32,21 @@ export default function Home() {
             signIn('twitter');
         }
     }
-
+    console.log(isConfettiCompleted)
     if (session) {
         return (
             <Layout>
-                <Confetti
-                    run={!value}
-                    width={width}
-                    height={height}
-                    recycle={!isComplete()}
-                    numberOfPieces={300}
-                    onConfettiComplete={() => setValue(true)}
-                />
+                {
+                    !isConfettiCompleted &&
+                    <Confetti
+                        run={!isConfettiCompleted}
+                        width={width}
+                        height={height}
+                        recycle={!isComplete()}
+                        numberOfPieces={300}
+                        onConfettiComplete={() => setConfettiCompleted(true)}
+                    />
+                }
                 <Followers session={session}/>
                 <div className="flex flex-wrap items-center justify-around max-w-4xl py-6 sm:w-full 2xl:py-12">
                     <Button label="Logout" onClick={() => oauthSignOut()} loader={loader}>Sign out</Button>
