@@ -1,11 +1,12 @@
 import {useSession, signIn, signOut} from "next-auth/react"
 import {useEffect, useState} from "react";
+import Confetti from 'react-confetti';
+import {useTimeout, useWindowSize, useLocalStorage} from 'react-use';
 import Layout from "../components/Layout";
 import Button from "../components/Button";
 import Followers from "../components/Followers";
 import Image from "next/image";
-import Confetti from 'react-confetti';
-import {useTimeout, useWindowSize, useLocalStorage} from 'react-use'
+import GitHubButton from "../components/GitHubButton";
 
 export default function Home() {
     const [loader, setLoader] = useState(false);
@@ -35,6 +36,7 @@ export default function Home() {
             signIn('twitter');
         }
     }
+
     if (session) {
         return (
             <Layout>
@@ -50,8 +52,9 @@ export default function Home() {
                     />
                 }
                 <Followers session={session}/>
-                <div className="flex flex-wrap items-center justify-around max-w-4xl py-6 sm:w-full 2xl:py-12">
+                <div className="flex flex-col md:flex-row flex-wrap items-center justify-center max-w-4xl py-6 sm:w-full 2xl:py-12">
                     <Button label="Logout" onClick={() => oauthSignOut()} loader={loader}>Sign out</Button>
+                    <GitHubButton/>
                 </div>
             </Layout>
         )
@@ -66,9 +69,12 @@ export default function Home() {
                     height={300}
                 />
             </div>
-            <Button label="Login with Twitter" onClick={() => oauthSignIn()} loader={loader}>
-                Sign in
-            </Button>
+            <div className="flex flex-col md:flex-row">
+                <Button label="Login with Twitter" onClick={() => oauthSignIn()} loader={loader}>
+                    Sign in
+                </Button>
+                <GitHubButton/>
+            </div>
         </Layout>
     )
 }
