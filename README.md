@@ -123,7 +123,7 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 ## Support
 
-This project needs a ⭐️ from you. Don't forget to leave a star ⭐️
+TwiterStats needs a ⭐️ from you. Don't forget to leave a star ⭐️
 
 If you found TwiterStats helpful, consider supporting me with a coffee.
 
