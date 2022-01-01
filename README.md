@@ -24,7 +24,7 @@
 
 TwiterStats is a Twitter Followers Tracker with some cool features.
 
-## 🚀 Demo
+## Demo
 
 <a href="https://twiter-stats.vercel.app" target="blank">
 <img src="public/cover-image.png" />
@@ -41,7 +41,7 @@ Try the App: [TwiterStats](https://twiter-stats.vercel.app)
 
 ## Quick Start
 
-## 🛠️ Installation Steps
+## Installation Steps
 
 1. Clone the repository
 
@@ -80,7 +80,7 @@ yarn run dev
 
 You are all set! Open [localhost:3000](http://localhost:3000/) to see the app.
 
-## 💻 Built with
+## Built with
 
 - [Next JS](https://nextjs.org/)
 - [NextAuth](https://next-auth.js.org): Authentication for Next.js
@@ -110,7 +110,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-## 🦄 Deploy
+## Deploy
 
 <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FNilanth%2Ftwiter-stats"><img src="https://vercel.com/button" alt="Deploy with Vercel" height="37.5px" />
 </a>
