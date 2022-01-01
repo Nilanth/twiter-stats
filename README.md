@@ -5,7 +5,7 @@
 <p align="center"><img src="public/cover-image.png" alt="twiterstats" width="550" /></p>
 
 <p align="center">
-    <a href="https://twiter-stats.vercel.app" target="blank">View Demo</a>
+    <a href="https://twiter-stats.vercel.app" target="_blank">View Demo</a>
     ·
     <a href="https://github.com/Nilanth/twiter-stats/issues/new/choose">Report Bug</a>
     ·
