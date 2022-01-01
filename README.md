@@ -2,6 +2,13 @@
 
 <h1 align="center">TwiterStats✨️</h1>
 
+<p align="center">
+<a href="https://github.com/Nilanth/twiter-stats/blob/master/LICENSE" target="blank">
+<img src="https://img.shields.io/github/license/Nilanth/twiter-stats?style=flat-square" alt="twiter-stats licence" />
+</a>
+<a href="https://twitter.com/intent/tweet?text=Checkout%20twiter-stats.vercel.app%20by%20@Nilanth.%20TwiterStats%20is%20a%20Twitter%20Followers%20Tracker%20build%20with%20Next.js,%20TailwindCSS,%20NextAuth,%20SWR%20%F0%9F%94%A5"><img src="https://img.shields.io/twitter/url?label=Share%20on%20Twitter&style=social&url=https%3A%2F%2Fgithub.com%2FNIlanth%2Ftwiter-stats"></a>
+</p>
+
 <p align="center"><img src="public/cover-image.png" alt="twiterstats" width="550" /></p>
 
 <p align="center">
@@ -39,7 +46,7 @@ Try the App: [TwiterStats](https://twiter-stats.vercel.app)
 1. Clone the repository
 
 ```bash
-https://github.com/Nilanth/twiter-stats.git
+git clone https://github.com/Nilanth/twiter-stats.git
 ```
 
 2. Change the working directory
@@ -63,6 +70,7 @@ NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_SECRET=
 NEXT_PUBLIC_ANALYTICS_ID=
 ```
+> Get **TWITTER_ID** and **TWITTER_SECRET** from the Twitter Developer Platform with a few simple steps using this [link](https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api).
 
 5. Run the app
 
