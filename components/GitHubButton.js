@@ -1,6 +1,6 @@
 function GitHubButton() {
     return (
-        <a href="https://github.com/nilanth/twiter-stats" target="_blank">
+        <a href="https://github.com/nilanth/twiter-stats" target="_blank" rel="noreferrer">
             <button className="inline-flex items-center bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500
                 hover:to-yellow-500 text-white font-semibold px-6 py-3 2xl:px-12 2xl:py-6 2xl:text-4xl rounded-md md:ml-6 mt-4 md:mt-0">
                 <svg className="mr-2" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px"
