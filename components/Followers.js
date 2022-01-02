@@ -8,6 +8,7 @@ import AnimatePing from "../components/animatePing";
 import HtmlToImage from "../components/HtmltoImage";
 import ProfileImage from "../public/profile-pic.png";
 import Tilt from "vanilla-tilt";
+import formatNumber from "../lib/NumberFormater";
 
 const fetcher = (...args) => fetch(...args).then(res => res.json());
 
@@ -59,7 +60,7 @@ export default function Followers({session}) {
                              hover:scale-110 hover:from-pink-500 hover:to-yellow-500">
                         <UserGroupIcon className="h-10 text-white"/>
                         <div className="text-4xl ml-4 align-middle font-semibold 2xl:text-6xl">
-                            {userData.followersCount}
+                            {userData.followersCount ? formatNumber(userData.followersCount) : 0}
                         </div>
                     </div>
                     <div className="flex items-center md:justify-end w-full exclude-in-image justify-center">
