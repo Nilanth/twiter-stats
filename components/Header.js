@@ -63,6 +63,7 @@ export default function Header() {
                     property="twitter:image"
                     content="https://twiter-stats.vercel.app/cover-image.png"
                 />
+                <meta name="google-site-verification" content="7X7mA-zdieQs5Sl4sBkZeZEnGGpQNauPStp1fgcA0vM" />
             </Head>
     )
 }
