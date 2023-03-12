@@ -1,0 +1,9 @@
+<!-- public/sitemap.xml -->
+<xml version="1.0" encoding="UTF-8">
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        <url>
+            <loc>https://twiter-stats.vercel.app/sitemap.xml</loc>
+            <lastmod>2023-03-12</lastmod>
+        </url>
+    </urlset>
+</xml>

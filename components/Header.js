@@ -3,7 +3,7 @@ import Head from 'next/head'
 export default function Header() {
     return (
             <Head>
-                <title>TwiterStats - Your Twitter Followers Tracker</title>
+                <title>TwiterStats - Your Twitter Followers Tracker - By Nilanth</title>
                 <link rel="icon" href="/ts-logo.ico" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <meta
@@ -15,11 +15,11 @@ export default function Header() {
                 </title>
                 <meta
                     name="description"
-                    content="TwiterStats - Track twitter followers count in realtime and profile"
+                    content="TwiterStats - Track twitter followers realtime count and basic profile"
                 />
                 <meta
                     name="keywords"
-                    content="twiterstats, nilanth, twiter-stats,twitter follower counter, nextjs, next-auth, react, open source, github"
+                    content="twiterstats, nilanth, twiter-stats,twitter follower counter, twitter, live follow count, live follower count, twitter Stats, real time follower counter"
                 />
                 <link rel="apple-touch-icon" href="/cover-image.png" />
                 <link rel="icon" href="/ts-logo.ico" />
@@ -31,7 +31,7 @@ export default function Header() {
                 />
                 <meta
                     name="description"
-                    content="TwiterStats - Track twitter followers count in realtime and profile"
+                    content="TwiterStats - Track twitter followers realtime count and basic profile"
                 />
 
                 {/* Open Graph / Facebook */}
@@ -42,7 +42,7 @@ export default function Header() {
                 />
                 <meta
                     property="og:description"
-                    content="TwiterStats - Track twitter followers count in realtime and profile"
+                    content="TwiterStats - Track twitter followers realtime count and basic profile"
                 />
                 <meta
                     property="og:image"
@@ -57,7 +57,7 @@ export default function Header() {
                 />
                 <meta
                     property="twitter:description"
-                    content="TwiterStats - Track twitter followers count in realtime and profile"
+                    content="TwiterStats - Track twitter followers realtime count and basic profile"
                 />
                 <meta
                     property="twitter:image"
