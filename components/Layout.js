@@ -8,6 +8,12 @@ export default function Layout(props) {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100 dark:bg-gray-900">
             <Header/>
+            <Script
+                id="beamer"
+                data-token="0fbb146e-e8fe-4838-9f61-89d001a59288"
+                src="https://beamanalytics.b-cdn.net/beam.min.js"
+                strategy="afterInteractive"
+            />
             {/* Global Site Tag (gtag.js) - Google Analytics */}
             <Script
                 src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID}`}
