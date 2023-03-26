@@ -1,5 +1,25 @@
 import Head from 'next/head'
 
+function addAppJsonLd() {
+    return {
+        __html: `{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Twitter Followers Count Tracker",
+          "description": "Track your Twitter followers count easily with our Twitter Followers Count Tracker. Get real-time insights and analyze your followers' growth with this simple and effective tool. Start tracking your Twitter followers today!",
+          "url": "https://twiter-stats.vercel.app",
+          "applicationCategory": "Social Media",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0.00",
+            "priceCurrency": "USD"
+          },
+        }
+        `,
+    };
+}
+
 export default function Header() {
     return (
             <Head>
@@ -53,6 +73,11 @@ export default function Header() {
                     content="https://twiter-stats.vercel.app/cover-image.png"
                 />
                 <meta name="google-site-verification" content="7X7mA-zdieQs5Sl4sBkZeZEnGGpQNauPStp1fgcA0vM" />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={addAppJsonLd()}
+                    key="app-jsonld"
+                />
             </Head>
     )
 }
