@@ -10,10 +10,6 @@ export default function Header() {
                     name="apple-mobile-web-app-status-bar-style"
                     content="black-translucent"
                 />
-                <meta
-                    name="description"
-                    content="TwiterStats - Track twitter followers realtime count and basic profile"
-                />
                 <link rel="apple-touch-icon" href="/cover-image.png" />
                 <link rel="icon" href="/ts-logo.ico" />
 
