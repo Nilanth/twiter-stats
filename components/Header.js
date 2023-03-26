@@ -3,23 +3,16 @@ import Head from 'next/head'
 export default function Header() {
     return (
             <Head>
-                <title>TwiterStats - Your Twitter Followers Tracker - By Nilanth</title>
+                <title>Twitter Followers Count Tracker | Track Your Twitter Followers Easily | Nilanth</title>
                 <link rel="icon" href="/ts-logo.ico" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <meta
                     name="apple-mobile-web-app-status-bar-style"
                     content="black-translucent"
                 />
-                <title>
-                    TwiterStats - Your Twitter Followers Tracker
-                </title>
                 <meta
                     name="description"
                     content="TwiterStats - Track twitter followers realtime count and basic profile"
-                />
-                <meta
-                    name="keywords"
-                    content="twiterstats, nilanth, twiter-stats,twitter follower counter, twitter, live follow count, live follower count, twitter Stats, real time follower counter"
                 />
                 <link rel="apple-touch-icon" href="/cover-image.png" />
                 <link rel="icon" href="/ts-logo.ico" />
@@ -27,22 +20,22 @@ export default function Header() {
                 {/* Primary Meta Tags */}
                 <meta
                     name="title"
-                    content="TwiterStats - Your Twitter Followers Tracker"
+                    content="Twitter Followers Count Tracker | Track Your Twitter Followers Easily | Nilanth"
                 />
                 <meta
                     name="description"
-                    content="TwiterStats - Track twitter followers realtime count and basic profile"
+                    content="Track your Twitter followers count easily with our Twitter Followers Count Tracker. Get real-time insights and analyze your followers' growth with this simple and effective tool. Start tracking your Twitter followers today!"
                 />
 
                 {/* Open Graph / Facebook */}
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:title"
-                    content="TwiterStats - Your Twitter Followers Tracker"
+                    content="Twitter Followers Count Tracker | Track Your Twitter Followers Easily | Nilanth"
                 />
                 <meta
                     property="og:description"
-                    content="TwiterStats - Track twitter followers realtime count and basic profile"
+                    content="Track your Twitter followers count easily with our Twitter Followers Count Tracker. Get real-time insights and analyze your followers' growth with this simple and effective tool. Start tracking your Twitter followers today!"
                 />
                 <meta
                     property="og:image"
@@ -53,11 +46,11 @@ export default function Header() {
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta
                     property="twitter:title"
-                    content="TwiterStats - Your Twitter Followers Tracker"
+                    content="Twitter Followers Count Tracker | Track Your Twitter Followers Easily | Nilanth"
                 />
                 <meta
                     property="twitter:description"
-                    content="TwiterStats - Track twitter followers realtime count and basic profile"
+                    content="Track your Twitter followers count easily with our Twitter Followers Count Tracker. Get real-time insights and analyze your followers' growth with this simple and effective tool. Start tracking your Twitter followers today!"
                 />
                 <meta
                     property="twitter:image"
